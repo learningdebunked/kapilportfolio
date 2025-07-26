@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, Linkedin, Mail, Calendar } from 'lucide-react';
+import React from 'react';
 
 export const metadata: Metadata = {
   title: 'Contact | Kapil Poreddy',
@@ -83,10 +84,14 @@ export default function ContactPage() {
               >
                 <div className="mb-4 flex items-center">
                   <div className={`mr-3 flex h-12 w-12 items-center justify-center rounded-lg ${method.color}`}>
-                    {typeof method.icon === 'function' ? (
-                      method.icon()
+                    {React.isValidElement(method.icon) ? (
+                      method.icon
+                    ) : typeof method.icon === 'function' ? (
+                      method.icon({ className: 'h-6 w-6' })
                     ) : (
-                      <method.icon className={`h-6 w-6 ${method.iconColor || 'text-white'}`} />
+                      <div className={method.iconColor || 'text-white'}>
+                        {React.createElement(method.icon, { className: 'h-6 w-6' })}
+                      </div>
                     )}
                   </div>
                   <h2 className="text-xl font-semibold text-foreground">{method.name}</h2>
