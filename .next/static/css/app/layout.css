@@ -928,6 +928,9 @@ video {
 .h-px {
   height: 1px;
 }
+.max-h-\[400px\] {
+  max-height: 400px;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -966,6 +969,9 @@ video {
 }
 .w-full {
   width: 100%;
+}
+.w-auto {
+  width: auto;
 }
 .min-w-\[10rem\] {
   min-width: 10rem;
@@ -1223,6 +1229,10 @@ video {
 }
 .fill-current {
   fill: currentColor;
+}
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .object-cover {
   -o-object-fit: cover;

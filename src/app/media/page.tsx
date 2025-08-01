@@ -14,6 +14,7 @@ export default function MediaPage() {
       title: 'Machine Learning Summit 2025',
       description: 'Panel: "Building AI Agents: Techniques and Tradeoffs That Matter" - A deep dive into the practical aspects of developing AI agents with real-world applications.',
       icon: <Mic className="h-5 w-5 text-primary" />,
+      image: '/images/SpeakerCard.jpeg',
       tags: ['Panel Discussion', 'AI Agents', 'Machine Learning', 'GenAI', 'LLMs'],
       links: [
         {
@@ -28,6 +29,7 @@ export default function MediaPage() {
       title: 'Digital Transformation Week',
       description: 'Panel: Unifying teams for successful digital transformation: Strategies for engagement and collaboration',
       icon: <Calendar className="h-5 w-5 text-primary" />,
+      image: '/images/DigitalTransformationExpo.png',
       tags: ['Panel Discussion', 'Digital Transformation', 'Leadership'],
       links: [
         {
@@ -85,6 +87,15 @@ export default function MediaPage() {
               <p className="mb-4 text-sm text-muted-foreground">
                 {item.description}
               </p>
+              {item.image && (
+                <div className="mb-4 overflow-hidden rounded-lg border bg-white p-2 shadow-sm">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="mx-auto max-h-[400px] w-auto object-contain"
+                  />
+                </div>
+              )}
               <div className="mb-4 flex flex-wrap gap-2">
                 {item.tags.map((tag, index) => (
                   <span
