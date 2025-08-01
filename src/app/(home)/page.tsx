@@ -67,7 +67,7 @@ export default function Home() {
                 </p>
                 
                 <p className="text-base leading-normal text-foreground">
-                  I'm an AI/ML leader with 15+ years of experience in building and scaling AI
+                  I'm an AI/ML leader with 19+ years of experience in building and scaling AI
                   platforms and teams. I specialize in driving digital transformation through
                   innovative AI solutions and cloud-native architectures.
                 </p>

@@ -929,14 +929,14 @@ video {
 .h-9 {
   height: 2.25rem;
 }
+.h-auto {
+  height: auto;
+}
 .h-full {
   height: 100%;
 }
 .h-px {
   height: 1px;
-}
-.h-auto {
-  height: auto;
 }
 .max-h-\[400px\] {
   max-height: 400px;
