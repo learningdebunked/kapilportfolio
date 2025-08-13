@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { Github } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -12,6 +12,21 @@ export default function WorkPage() {
   const projects = [
     {
       id: 1,
+      title: 'Moderator - GDAI 2025',
+      description: 'Serving as a moderator at the Global Data & AI Conference 2025, facilitating discussions and knowledge sharing among industry leaders and researchers in the field of Data Science and Artificial Intelligence.',
+      image: '/images/GDAI.png',
+      tags: ['GDAI 2025', 'Moderator', 'Data Science', 'Artificial Intelligence', 'Conference'],
+      links: [
+        {
+          label: 'View Post',
+          url: 'https://www.linkedin.com/posts/dataglobal-hub_gdai2025-moderator-engineering-activity-7360980602382118914-WM-r?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAWtMGYBtRrwbj0Otfj1hjZWmBV-IC_N6x4',
+          external: true,
+          icon: <ExternalLink className="ml-1 h-4 w-4" />
+        }
+      ]
+    },
+    {
+      id: 2,
       title: 'ICACECS 2025 Paper Reviewer',
       description: 'Certified reviewer for ICACECS 2025 research papers. Contributed to maintaining the quality and integrity of academic research in the field of advanced computing and emerging computing sciences through thorough and constructive peer reviews.',
       image: '/images/Certificate.png',
@@ -25,7 +40,7 @@ export default function WorkPage() {
       ]
     },
     {
-      id: 2,
+      id: 3,
       title: 'Healthcare Event Logging for MCP',
       description: 'AI agents in healthcare increasingly rely on contextual memory from MCP servers to summarize records, make recommendations, or drive decisions. But this introduces risk:\n\n Unchecked exposure of PHI/PII\n Unbounded token consumption in LLMs\n No visibility into what context was used and why\n\nHELMCP provides a policy-driven middleware layer that brings governance, transparency, and control over every request to an MCP server.',
       tags: ['Healthcare', 'MCP Server', 'PHI/PII Governance', 'AI Governance', 'Compliance'],
@@ -38,7 +53,7 @@ export default function WorkPage() {
       ]
     },
     {
-      id: 3,
+      id: 4,
       title: 'Parrot - Lightweight Mock Service',
       description: 'A lightweight Spring Boot based mock service for quickly setting up REST API endpoints with templated responses. Ideal for testing and development environments.',
       tags: ['Java', 'Spring Boot', 'REST API', 'Testing', 'Mocking'],
@@ -111,7 +126,7 @@ export default function WorkPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center text-sm font-medium text-primary hover:underline"
                     >
-                      {link.label} {link.external && <Github className="ml-1 h-4 w-4" />}
+                      {link.label} {link.external && link.icon}
                     </a>
                   ))}
                 </div>
