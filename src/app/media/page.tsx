@@ -11,6 +11,22 @@ export default function MediaPage() {
   const mediaItems = [
     {
       id: 1,
+      title: 'Moderator - GDAI 2025',
+      description: 'Serving as a moderator at the Global Data & AI Conference 2025, facilitating discussions and knowledge sharing among industry leaders and researchers in the field of Data Science and Artificial Intelligence.',
+      icon: <Mic className="h-5 w-5 text-primary" />,
+      image: '/images/GDAI.png',
+      tags: ['GDAI 2025', 'Moderator', 'Data Science', 'Artificial Intelligence', 'Conference'],
+      links: [
+        {
+          label: 'View Post',
+          url: 'https://www.linkedin.com/posts/dataglobal-hub_gdai2025-moderator-engineering-activity-7360980602382118914-WM-r?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAWtMGYBtRrwbj0Otfj1hjZWmBV-IC_N6x4',
+          external: true,
+          icon: <ExternalLink className="ml-1 h-4 w-4" />
+        }
+      ]
+    },
+    {
+      id: 2,
       title: 'Machine Learning Summit 2025',
       description: 'Panel: "Building AI Agents: Techniques and Tradeoffs That Matter" - A deep dive into the practical aspects of developing AI agents with real-world applications.',
       icon: <Mic className="h-5 w-5 text-primary" />,
@@ -25,7 +41,7 @@ export default function MediaPage() {
       ]
     },
     {
-      id: 2,
+      id: 3,
       title: 'Digital Transformation Week',
       description: 'Panel: Unifying teams for successful digital transformation: Strategies for engagement and collaboration',
       icon: <Calendar className="h-5 w-5 text-primary" />,
@@ -46,7 +62,7 @@ export default function MediaPage() {
     },
     // Add more media items here in the future
     // {
-    //   id: 3,
+    //   id: 4,
     //   title: 'Interview on AI Trends',
     //   description: 'Watch my interview discussing the latest trends in AI and machine learning.',
     //   icon: <Video className="h-5 w-5 text-primary" />,
@@ -117,7 +133,7 @@ export default function MediaPage() {
                       className="inline-flex items-center text-sm font-medium text-primary hover:underline"
                     >
                       {link.label}
-                      {link.external && <ExternalLink className="ml-1 h-3 w-3" />}
+                      {link.external && link.icon}
                     </Link>
                   ))
                 ) : (
