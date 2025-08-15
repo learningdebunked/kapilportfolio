@@ -20,7 +20,8 @@ export default function WorkPage() {
         {
           label: 'View Certificate',
           url: '/images/Certificate.png',
-          external: true
+          external: true,
+          icon: <ExternalLink className="ml-1 h-4 w-4" />
         }
       ]
     },
@@ -33,7 +34,8 @@ export default function WorkPage() {
         {
           label: 'View on GitHub',
           url: 'https://github.com/learningdebunked/HELMCP',
-          external: true
+          external: true,
+          icon: <ExternalLink className="ml-1 h-4 w-4" />
         }
       ]
     },
@@ -46,7 +48,8 @@ export default function WorkPage() {
         {
           label: 'View on GitHub',
           url: 'https://github.com/learningdebunked/Parrot',
-          external: true
+          external: true,
+          icon: <ExternalLink className="ml-1 h-4 w-4" />
         }
       ]
     }
@@ -111,7 +114,7 @@ export default function WorkPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center text-sm font-medium text-primary hover:underline"
                     >
-                      {link.label} {link.external && link.icon}
+                      {link.label} {link.icon}
                     </a>
                   ))}
                 </div>
