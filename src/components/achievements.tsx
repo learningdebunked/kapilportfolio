@@ -37,7 +37,7 @@ const roles = [
     organization: 'ICACECS 2025',
     description: 'Certified reviewer for ICACECS 2025 research papers. Contributed to maintaining the quality and integrity of academic research in the field of advanced computing and emerging computing sciences through thorough and constructive peer reviews.',
     icon: <FileText className="h-6 w-6 text-primary" />,
-    period: '2025',
+    period: 'July 2025',
     link: '/images/Certificate.png',
     linkText: 'View Certificate'
   },
