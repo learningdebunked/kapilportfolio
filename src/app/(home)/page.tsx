@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, Brain, Cloud, Users, Code, Layers, BarChart2, Mic, ExternalLink, MessageSquare } from 'lucide-react';
+import { AdvisoryRoles } from '@/components/achievements';
 
 export const metadata: Metadata = {
   title: 'Kapil Poreddy | AI Powered Senior Engineering Leader',
@@ -74,89 +75,11 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Profile Cards Grid */}
-            <div className="grid gap-6 md:grid-cols-3">
-              {/* Sessionize Profile */}
-              <div className="rounded-lg border bg-card p-6 shadow-sm">
-                <div className="mb-4 flex items-center">
-                  <div className="mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
-                    <Mic className="h-5 w-5 text-primary" />
-                  </div>
-                  <h2 className="text-xl font-bold tracking-tight text-foreground">Speaker Profile</h2>
-                </div>
-                <p className="mb-4 text-muted-foreground">
-                  View my speaking engagements, conferences, and tech talks on AI, ML, and engineering leadership.
-                </p>
-                <div className="mb-4 flex flex-wrap gap-2">
-                  <span className="inline-flex items-center rounded-full bg-secondary px-2.5 py-0.5 text-xs font-medium text-secondary-foreground">
-                    Public Speaking
-                  </span>
-                  <span className="inline-flex items-center rounded-full bg-secondary px-2.5 py-0.5 text-xs font-medium text-secondary-foreground">
-                    Tech Talks
-                  </span>
-                </div>
-                <Link
-                  href="https://sessionize.com/Kapilporeddy/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-sm font-medium text-primary hover:underline"
-                >
-                  View on Sessionize <ExternalLink className="ml-1 h-3 w-3" />
-                </Link>
-              </div>
+            {/* Advisory and Volunteer Service Roles Section */}
+            <AdvisoryRoles />
 
-              {/* ADPList Profile */}
-              <div className="rounded-lg border bg-card p-6 shadow-sm">
-                <div className="mb-4 flex items-center">
-                  <div className="mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
-                    <MessageSquare className="h-5 w-5 text-primary" />
-                  </div>
-                  <h2 className="text-xl font-bold tracking-tight text-foreground">Mentorship</h2>
-                </div>
-                <p className="mb-4 text-muted-foreground">
-                  Book a free session to discuss career growth, leadership, and technology.
-                </p>
-                <div className="mb-4 flex flex-wrap gap-2">
-                  <span className="inline-flex items-center rounded-full bg-secondary px-2.5 py-0.5 text-xs font-medium text-secondary-foreground">
-                    Career Growth
-                  </span>
-                  <span className="inline-flex items-center rounded-full bg-secondary px-2.5 py-0.5 text-xs font-medium text-secondary-foreground">
-                    Leadership
-                  </span>
-                </div>
-                <Link
-                  href="https://adplist.org/mentors/kapil-reddy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-sm font-medium text-primary hover:underline"
-                >
-                  Book on ADPList <ExternalLink className="ml-1 h-3 w-3" />
-                </Link>
-              </div>
-
-              {/* IEEE Profile */}
-              <div className="rounded-lg border bg-card p-6 shadow-sm">
-                <div className="mb-4 flex items-center">
-                  <div className="mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#00629B] text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-                      <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
-                    </svg>
-                  </div>
-                  <h2 className="text-xl font-bold tracking-tight text-foreground">IEEE</h2>
-                </div>
-                <p className="mb-4 text-sm text-muted-foreground">
-                  Connect with me on IEEE for professional networking and collaboration.
-                </p>
-                <Link
-                  href="https://ieee-collabratec.ieee.org/app/p/KapilPoreddy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-sm font-medium text-primary hover:underline"
-                >
-                  View on IEEE <ExternalLink className="ml-1 h-3 w-3" />
-                </Link>
-              </div>
-            </div>
+            {/* Profile Cards Grid - Removed as per user request */}
+            
           </div>
         </div>
       </section>
