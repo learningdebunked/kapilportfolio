@@ -4,6 +4,16 @@ const roles = [
   {
     id: 1,
     title: 'Awards Judge',
+    organization: 'Claro Awards',
+    description: 'Selected as a judge to evaluate and recognize outstanding achievements and innovations in the technology and business sectors.',
+    icon: <Award className="h-6 w-6 text-primary" />,
+    period: 'August 2025',
+    link: 'https://claroawards.com/',
+    linkText: 'Visit Website'
+  },
+  {
+    id: 2,
+    title: 'Awards Judge',
     organization: 'Business Intelligence Group',
     description: 'Volunteering to evaluate and recognize innovative business solutions and leadership in technology.',
     icon: <Award className="h-6 w-6 text-primary" />,
@@ -12,7 +22,7 @@ const roles = [
     linkText: 'View Profile'
   },
   {
-    id: 2,
+    id: 3,
     title: 'Program Committee Member',
     organization: 'RS4SD Workshop',
     description: 'Volunteering to review and select research papers and presentations in the field of software development.',
@@ -22,7 +32,7 @@ const roles = [
     linkText: 'View Committee'
   },
   {
-    id: 3,
+    id: 4,
     title: 'Advisory Board Member',
     organization: 'TechLeader.AI',
     description: 'Providing strategic guidance and leadership to shape the future of AI leadership and technology innovation.',
@@ -32,7 +42,7 @@ const roles = [
     linkText: 'Visit Website'
   },
   {
-    id: 4,
+    id: 5,
     title: 'Paper Reviewer',
     organization: 'ICACECS 2025',
     description: 'Certified reviewer for ICACECS 2025 research papers. Contributed to maintaining the quality and integrity of academic research in the field of advanced computing and emerging computing sciences through thorough and constructive peer reviews.',
@@ -42,7 +52,7 @@ const roles = [
     linkText: 'View Certificate'
   },
   {
-    id: 5,
+    id: 6,
     title: 'Tentative Reviewer',
     organization: 'ICIS 2025',
     description: 'Reviewing research papers for ICIS 2025, contributing to the advancement of information systems research by evaluating and providing feedback on cutting-edge studies in the field.',
