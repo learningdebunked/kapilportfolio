@@ -12,21 +12,6 @@ export default function WorkPage() {
   const projects = [
     {
       id: 1,
-      title: 'ICACECS 2025 Paper Reviewer',
-      description: 'Certified reviewer for ICACECS 2025 research papers. Contributed to maintaining the quality and integrity of academic research in the field of advanced computing and emerging computing sciences through thorough and constructive peer reviews.',
-      image: '/images/Certificate.png',
-      tags: ['ICACECS 2025', 'Peer Review', 'Research', 'Academic Service'],
-      links: [
-        {
-          label: 'View Certificate',
-          url: '/images/Certificate.png',
-          external: true,
-          icon: <ExternalLink className="ml-1 h-4 w-4" />
-        }
-      ]
-    },
-    {
-      id: 2,
       title: 'Healthcare Event Logging for MCP',
       description: 'AI agents in healthcare increasingly rely on contextual memory from MCP servers to summarize records, make recommendations, or drive decisions. But this introduces risk:\n\n Unchecked exposure of PHI/PII\n Unbounded token consumption in LLMs\n No visibility into what context was used and why\n\nHELMCP provides a policy-driven middleware layer that brings governance, transparency, and control over every request to an MCP server.',
       tags: ['Healthcare', 'MCP Server', 'PHI/PII Governance', 'AI Governance', 'Compliance'],
@@ -40,7 +25,7 @@ export default function WorkPage() {
       ]
     },
     {
-      id: 3,
+      id: 2,
       title: 'Parrot - Lightweight Mock Service',
       description: 'A lightweight Spring Boot based mock service for quickly setting up REST API endpoints with templated responses. Ideal for testing and development environments.',
       tags: ['Java', 'Spring Boot', 'REST API', 'Testing', 'Mocking'],
