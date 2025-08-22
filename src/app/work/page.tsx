@@ -3,13 +3,29 @@ import Link from 'next/link';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { Github } from 'lucide-react';
 
+type ProjectLink = {
+  label: string;
+  url: string;
+  external: boolean;
+  icon: React.ReactNode;
+};
+
+type Project = {
+  id: number;
+  title: string;
+  description: string;
+  tags: string[];
+  links: ProjectLink[];
+  image?: string; // Make image optional
+};
+
 export const metadata: Metadata = {
   title: 'My Work | Kapil Poreddy',
   description: 'Explore my portfolio of projects and case studies',
 };
 
 export default function WorkPage() {
-  const projects = [
+  const projects: Project[] = [
     {
       id: 1,
       title: 'Healthcare Event Logging for MCP',
@@ -68,7 +84,7 @@ export default function WorkPage() {
                 <div className="my-4 overflow-hidden rounded-md border bg-white p-2">
                   <img
                     src={project.image}
-                    alt={`${project.title} Certificate`}
+                    alt={`${project.title} screenshot`}
                     className="mx-auto h-auto w-full object-contain"
                   />
                 </div>
@@ -91,12 +107,12 @@ export default function WorkPage() {
                 </div>
                 
                 <div className="mt-4">
-                  {project.links.map((link) => (
+                  {project.links.map((link, index) => (
                     <a
-                      key={link.label}
+                      key={index}
                       href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      target={link.external ? "_blank" : "_self"}
+                      rel={link.external ? "noopener noreferrer" : ""}
                       className="inline-flex items-center text-sm font-medium text-primary hover:underline"
                     >
                       {link.label} {link.icon}
