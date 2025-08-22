@@ -40,12 +40,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Profile Cards Section */}
-      <section className="py-8 md:py-12 bg-muted/30">
+      {/* About Me Section */}
+      <section className="py-8 md:py-12">
         <div className="container">
           <div className="mx-auto max-w-6xl">
-            {/* About Me Card */}
-            <div className="mb-8 rounded-lg border bg-card p-8 shadow-sm">
+            <div className="rounded-lg border bg-card p-8 shadow-sm">
               <h2 className="mb-6 text-3xl font-bold tracking-tight text-foreground">
                 About Me
               </h2>
@@ -74,10 +73,17 @@ export default function Home() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Advisory and Volunteer Service Roles Section */}
-            <AdvisoryRoles />
+      {/* Advisory and Volunteer Service Roles Section */}
+      <AdvisoryRoles />
 
+      {/* Profile Cards Section */}
+      <section className="py-8 md:py-12 bg-muted/30">
+        <div className="container">
+          <div className="mx-auto max-w-6xl">
             {/* Profile Cards Grid - Removed as per user request */}
             
           </div>
