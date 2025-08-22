@@ -3,6 +3,36 @@ import { Award, Users, Star, ChevronRight, FileText } from 'lucide-react';
 const roles = [
   {
     id: 1,
+    title: 'Awards Judge',
+    organization: 'Business Intelligence Group',
+    description: 'Volunteering to evaluate and recognize innovative business solutions and leadership in technology.',
+    icon: <Award className="h-6 w-6 text-primary" />,
+    period: 'August 2025',
+    link: 'https://www.bintelligence.com/judge/kapil-poreddy',
+    linkText: 'View Profile'
+  },
+  {
+    id: 2,
+    title: 'Program Committee Member',
+    organization: 'RS4SD Workshop',
+    description: 'Volunteering to review and select research papers and presentations in the field of software development.',
+    icon: <Users className="h-6 w-6 text-primary" />,
+    period: 'August 2025',
+    link: 'https://rs4sd-workshop.github.io/#/team/#pc',
+    linkText: 'View Committee'
+  },
+  {
+    id: 3,
+    title: 'Advisory Board Member',
+    organization: 'TechLeader.AI',
+    description: 'Providing strategic guidance and leadership to shape the future of AI leadership and technology innovation.',
+    icon: <Star className="h-6 w-6 text-primary" />,
+    period: 'August 2025',
+    link: 'https://www.techleader.ai/about',
+    linkText: 'Visit Website'
+  },
+  {
+    id: 4,
     title: 'Paper Reviewer',
     organization: 'ICACECS 2025',
     description: 'Certified reviewer for ICACECS 2025 research papers. Contributed to maintaining the quality and integrity of academic research in the field of advanced computing and emerging computing sciences through thorough and constructive peer reviews.',
@@ -12,34 +42,14 @@ const roles = [
     linkText: 'View Certificate'
   },
   {
-    id: 2,
-    title: 'Advisory Board Member',
-    organization: 'TechLeader.AI',
-    description: 'Providing strategic guidance and leadership to shape the future of AI leadership and technology innovation.',
-    icon: <Star className="h-6 w-6 text-primary" />,
-    period: '2025',
-    link: 'https://www.techleader.ai/about',
-    linkText: 'Visit Website'
-  },
-  {
-    id: 3,
-    title: 'Program Committee Member',
-    organization: 'RS4SD Workshop',
-    description: 'Volunteering to review and select research papers and presentations in the field of software development.',
-    icon: <Users className="h-6 w-6 text-primary" />,
-    period: '2025',
-    link: 'https://rs4sd-workshop.github.io/#/team/#pc',
-    linkText: 'View Committee'
-  },
-  {
-    id: 4,
-    title: 'Awards Judge',
-    organization: 'Business Intelligence Group',
-    description: 'Volunteering to evaluate and recognize innovative business solutions and leadership in technology.',
-    icon: <Award className="h-6 w-6 text-primary" />,
-    period: '2025',
-    link: 'https://www.bintelligence.com/judge/kapil-poreddy',
-    linkText: 'View Profile'
+    id: 5,
+    title: 'Tentative Reviewer',
+    organization: 'ICIS 2025',
+    description: 'Reviewing research papers for ICIS 2025, contributing to the advancement of information systems research by evaluating and providing feedback on cutting-edge studies in the field.',
+    icon: <FileText className="h-6 w-6 text-primary" />,
+    period: 'July 2025',
+    link: '#', // Update with actual link if available
+    linkText: 'Learn More'
   }
 ];
 
@@ -60,7 +70,7 @@ export function AdvisoryRoles() {
           {roles.map((role) => (
             <div 
               key={role.id}
-              className="group relative overflow-hidden rounded-xl border border-gray-200 dark:border-gray-800 p-6 transition-all duration-300 hover:shadow-lg hover:border-primary/50 dark:hover:border-primary/50 bg-white dark:bg-gray-800"
+              className="group relative flex flex-col overflow-hidden rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md hover:border-primary/50 dark:hover:border-primary/50"
             >
               <div className="absolute right-4 top-4 text-gray-300 dark:text-gray-600 group-hover:text-primary transition-colors">
                 {role.icon}
