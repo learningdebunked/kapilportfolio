@@ -32,16 +32,6 @@ const roles = [
     linkText: 'View Committee'
   },
   {
-    id: 4,
-    title: 'Advisory Board Member',
-    organization: 'TechLeader.AI',
-    description: 'Providing strategic guidance and leadership to shape the future of AI leadership and technology innovation.',
-    icon: <Star className="h-6 w-6 text-primary" />,
-    period: 'August 2025',
-    link: 'https://www.techleader.ai/about',
-    linkText: 'Visit Website'
-  },
-  {
     id: 5,
     title: 'Paper Reviewer',
     organization: 'ICACECS 2025',
