@@ -9,7 +9,9 @@ const roles = [
     icon: <Award className="h-6 w-6 text-primary" />,
     period: 'August 2025',
     link: 'https://claroawards.com/',
-    linkText: 'Visit Website'
+    linkText: 'Visit Website',
+    additionalLink: 'https://www.linkedin.com/posts/claroawards_claroawards-techexcellence-tech-activity-7366137155544338432-bBko',
+    additionalLinkText: 'View Announcement'
   },
   {
     id: 2,
@@ -94,6 +96,16 @@ export function AdvisoryRoles() {
                     className="mt-3 inline-flex items-center text-sm font-medium text-primary hover:underline"
                   >
                     {role.linkText} <ChevronRight className="ml-1 h-4 w-4" />
+                  </a>
+                )}
+                {role.additionalLink && (
+                  <a
+                    href={role.additionalLink}
+                    target={role.additionalLink.startsWith('http') ? "_blank" : "_self"}
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center text-sm font-medium text-primary hover:underline"
+                  >
+                    {role.additionalLinkText} <ChevronRight className="ml-1 h-4 w-4" />
                   </a>
                 )}
               </div>
