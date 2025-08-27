@@ -1,8 +1,22 @@
-import { Award, Users, Star, ChevronRight, FileText } from 'lucide-react';
+import { Award, Users, Star, ChevronRight, FileText, Presentation } from 'lucide-react';
 
 const roles = [
   {
     id: 1,
+    title: 'Conference Speaker',
+    organization: 'IEEE International Conference on AI in Engineering & Technology',
+    description: 'Invited to present research on cutting-edge AI applications in engineering and technology at this prestigious international conference.',
+    icon: <Presentation className="h-6 w-6 text-primary" />,
+    period: 'August 28, 2025 (9:00 AM MYT)',
+    link: 'https://iicaiet.ieeesabah.org/IICAIET2025ProgramBookV24082025.pdf',
+    linkText: 'View Program Book',
+    additionalLink: 'https://youtube.com',
+    additionalLinkText: 'Watch Presentation (Coming Soon)',
+    thirdLink: '#',
+    thirdLinkText: 'Download Slides (Coming Soon)'
+  },
+  {
+    id: 2,
     title: 'Awards Judge',
     organization: 'Claro Awards',
     description: 'Selected as a judge to evaluate and recognize outstanding achievements and innovations in the technology and business sectors.',
@@ -14,7 +28,7 @@ const roles = [
     additionalLinkText: 'View Announcement'
   },
   {
-    id: 2,
+    id: 3,
     title: 'Awards Judge',
     organization: 'Business Intelligence Group',
     description: 'Volunteering to evaluate and recognize innovative business solutions and leadership in technology.',
@@ -24,7 +38,7 @@ const roles = [
     linkText: 'View Profile'
   },
   {
-    id: 3,
+    id: 4,
     title: 'Program Committee Member',
     organization: 'RS4SD Workshop',
     description: 'Volunteering to review and select research papers and presentations in the field of software development.',
@@ -50,7 +64,7 @@ const roles = [
     description: 'Reviewing research papers for ICIS 2025, contributing to the advancement of information systems research by evaluating and providing feedback on cutting-edge studies in the field.',
     icon: <FileText className="h-6 w-6 text-primary" />,
     period: 'July 2025',
-    link: '#', // Update with actual link if available
+    link: '#',
     linkText: 'Learn More'
   }
 ];
@@ -99,14 +113,26 @@ export function AdvisoryRoles() {
                   </a>
                 )}
                 {role.additionalLink && (
-                  <a
-                    href={role.additionalLink}
-                    target={role.additionalLink.startsWith('http') ? "_blank" : "_self"}
-                    rel="noopener noreferrer"
-                    className="mt-3 inline-flex items-center text-sm font-medium text-primary hover:underline"
-                  >
-                    {role.additionalLinkText} <ChevronRight className="ml-1 h-4 w-4" />
-                  </a>
+                  <div className="flex flex-col">
+                    <a
+                      href={role.additionalLink}
+                      target={role.additionalLink.startsWith('http') ? "_blank" : "_self"}
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-flex items-center text-sm font-medium text-primary hover:underline"
+                    >
+                      {role.additionalLinkText} <ChevronRight className="ml-1 h-4 w-4" />
+                    </a>
+                    {role.thirdLink && (
+                      <a
+                        href={role.thirdLink}
+                        target={role.thirdLink.startsWith('http') ? "_blank" : "_self"}
+                        rel="noopener noreferrer"
+                        className="mt-2 inline-flex items-center text-sm font-medium text-primary hover:underline"
+                      >
+                        {role.thirdLinkText} <ChevronRight className="ml-1 h-4 w-4" />
+                      </a>
+                    )}
+                  </div>
                 )}
               </div>
             </div>
