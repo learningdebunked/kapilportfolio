@@ -64,6 +64,18 @@ const roles = [
   },
   {
     id: 6,
+    title: 'Publicity Chair',
+    organization: 'CCNIS 2025',
+    description: 'Serving as Publicity Chair for the 2025 International Conference on Computer Networks and Information Security (CCNIS 2025), responsible for promoting the conference and increasing its visibility in the academic and professional communities.',
+    icon: <Users className="h-6 w-6 text-primary" />,
+    period: '2025',
+    link: 'https://www.ic-ccnis.org/committee',
+    linkText: 'View Committee',
+    additionalLink: 'https://www.ic-ccnis.org/',
+    additionalLinkText: 'Conference Website'
+  },
+  {
+    id: 7,
     title: 'Tentative Reviewer',
     organization: 'ICIS 2025',
     description: 'Reviewing research papers for ICIS 2025, contributing to the advancement of information systems research by evaluating and providing feedback on cutting-edge studies in the field.',
