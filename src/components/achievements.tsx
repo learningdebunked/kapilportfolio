@@ -1,10 +1,14 @@
+'use client';
+
 import { Award, Users, Star, ChevronRight, FileText, Presentation } from 'lucide-react';
+import { useState } from 'react';
+import { PdfViewer } from './PdfViewer';
 
 const roles = [
   {
     id: 1,
     title: 'Conference Speaker',
-    organization: 'IEEE International Conference on AI in Engineering & Technology',
+    organization: 'IEEE International Conference on AI in Engineering & Technology - IICAIET 2025',
     description: 'Invited to present research on cutting-edge AI applications in engineering and technology at this prestigious international conference.',
     icon: <Presentation className="h-6 w-6 text-primary" />,
     period: 'August 28, 2025 (9:00 AM MYT)',
@@ -12,8 +16,9 @@ const roles = [
     linkText: 'View Program Book',
     additionalLink: 'https://youtube.com',
     additionalLinkText: 'Watch Presentation (Coming Soon)',
-    thirdLink: '#',
-    thirdLinkText: 'Download Slides (Coming Soon)'
+    thirdLink: '/certificates/certificate_iicaiet2025.pdf',
+    thirdLinkText: 'View Certificate',
+    isPdf: true
   },
   {
     id: 2,
@@ -70,6 +75,13 @@ const roles = [
 ];
 
 export function AdvisoryRoles() {
+  const [openPdf, setOpenPdf] = useState(false);
+  const [currentPdf, setCurrentPdf] = useState('');
+
+  const handlePdfClick = (pdfUrl: string) => {
+    setCurrentPdf(pdfUrl);
+    setOpenPdf(true);
+  };
   return (
     <section className="py-12 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
@@ -116,21 +128,24 @@ export function AdvisoryRoles() {
                   <div className="flex flex-col">
                     <a
                       href={role.additionalLink}
-                      target={role.additionalLink.startsWith('http') ? "_blank" : "_self"}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="mt-3 inline-flex items-center text-sm font-medium text-primary hover:underline"
                     >
                       {role.additionalLinkText} <ChevronRight className="ml-1 h-4 w-4" />
                     </a>
                     {role.thirdLink && (
-                      <a
-                        href={role.thirdLink}
-                        target={role.thirdLink.startsWith('http') ? "_blank" : "_self"}
-                        rel="noopener noreferrer"
-                        className="mt-2 inline-flex items-center text-sm font-medium text-primary hover:underline"
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          role.isPdf 
+                            ? handlePdfClick(role.thirdLink) 
+                            : window.open(role.thirdLink, '_blank');
+                        }}
+                        className="mt-2 inline-flex items-center text-sm font-medium text-primary hover:underline text-left"
                       >
                         {role.thirdLinkText} <ChevronRight className="ml-1 h-4 w-4" />
-                      </a>
+                      </button>
                     )}
                   </div>
                 )}
@@ -139,6 +154,11 @@ export function AdvisoryRoles() {
           ))}
         </div>
       </div>
+      <PdfViewer 
+        url={currentPdf} 
+        open={openPdf} 
+        onOpenChange={setOpenPdf} 
+      />
     </section>
   );
 }
