@@ -1,8 +1,11 @@
 'use client';
 
-import { Award, Users, Star, ChevronRight, FileText, Presentation } from 'lucide-react';
+import { Award, Users, Star, ChevronRight, FileText, Presentation, Share2 } from 'lucide-react';
 import { useState } from 'react';
 import { PdfViewer } from './PdfViewer';
+import { toast } from 'sonner';
+
+const BASE_URL = typeof window !== 'undefined' ? window.location.origin : '';
 
 const roles = [
   {
@@ -110,10 +113,62 @@ export function AdvisoryRoles() {
           {roles.map((role) => (
             <div 
               key={role.id}
+              id={`achievement-${role.id}`}
               className="group relative flex flex-col overflow-hidden rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md hover:border-primary/50 dark:hover:border-primary/50"
             >
-              <div className="absolute right-4 top-4 text-gray-300 dark:text-gray-600 group-hover:text-primary transition-colors">
-                {role.icon}
+              <div className="absolute right-4 top-4 flex flex-col items-end space-y-2">
+                <div className="text-gray-300 dark:text-gray-600 group-hover:text-primary transition-colors">
+                  {role.icon}
+                </div>
+                <button
+                  onClick={async (e) => {
+                    e.stopPropagation();
+                    const shareUrl = `${window.location.origin}/achievements#achievement-${role.id}`;
+                    
+                    try {
+                      if (navigator.share) {
+                        // Web Share API is available (mobile and some desktop browsers)
+                        await navigator.share({
+                          title: `${role.title} - ${role.organization}`,
+                          text: role.description,
+                          url: shareUrl,
+                        });
+                      } else if (navigator.clipboard) {
+                        // Fallback to clipboard API
+                        try {
+                          await navigator.clipboard.writeText(shareUrl);
+                          toast.success('Link copied to clipboard!');
+                        } catch (clipboardErr) {
+                          // Final fallback for older browsers
+                          const textArea = document.createElement('textarea');
+                          textArea.value = shareUrl;
+                          document.body.appendChild(textArea);
+                          textArea.select();
+                          document.execCommand('copy');
+                          document.body.removeChild(textArea);
+                          toast.success('Link copied to clipboard!');
+                        }
+                      } else {
+                        // Last resort: show the URL in an alert
+                        window.prompt('Copy to clipboard: Ctrl+C, Enter', shareUrl);
+                      }
+                    } catch (err) {
+                      console.error('Sharing failed:', err);
+                      // If sharing is cancelled or fails, try to copy to clipboard
+                      try {
+                        await navigator.clipboard?.writeText(shareUrl);
+                        toast.success('Link copied to clipboard!');
+                      } catch (clipboardErr) {
+                        toast.error('Failed to share or copy link');
+                      }
+                    }
+                  }}
+                  className="text-gray-400 hover:text-primary transition-colors p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
+                  aria-label="Share this achievement"
+                  title="Share this achievement"
+                >
+                  <Share2 className="h-4 w-4" />
+                </button>
               </div>
               <div className="mt-2">
                 <span className="text-sm font-medium text-primary">{role.period}</span>
