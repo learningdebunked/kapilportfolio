@@ -11,6 +11,30 @@ const roles = [
   {
     id: 1,
     title: 'Conference Speaker',
+    organization: 'IEEE San Francisco Bay Area Computer Society',
+    description: 'Presenting on "Telemetry-Driven GitHub Copilot Integration Framework" at this prestigious technical society meeting.',
+    icon: <Presentation className="h-6 w-6 text-primary" />,
+    period: 'September 21, 2025',
+    location: 'San Francisco Bay Area, CA',
+    link: '#',
+    linkText: 'Event Details',
+    isUpcoming: true
+  },
+  {
+    id: 2,
+    title: 'Poster Session Speaker',
+    organization: 'Linux Foundation - PyTorch Conference 2025',
+    description: 'Presenting research on "Reducing MTTR and Alert Fatigue with PyTorch-Powered Anomaly Detection" at this premier PyTorch conference.',
+    icon: <Presentation className="h-6 w-6 text-primary" />,
+    period: 'October 22-23, 2025',
+    location: 'San Francisco, CA',
+    link: '#',
+    linkText: 'Conference Details',
+    isUpcoming: true
+  },
+  {
+    id: 3,
+    title: 'Conference Speaker',
     organization: 'IEEE International Conference on AI in Engineering & Technology - IICAIET 2025',
     description: 'Invited to present research on cutting-edge AI applications in engineering and technology at this prestigious international conference.',
     icon: <Presentation className="h-6 w-6 text-primary" />,
@@ -24,7 +48,7 @@ const roles = [
     isPdf: true
   },
   {
-    id: 2,
+    id: 4,
     title: 'Awards Judge',
     organization: 'Claro Awards',
     description: 'Selected as a judge to evaluate and recognize outstanding achievements and innovations in the technology and business sectors.',
@@ -36,7 +60,7 @@ const roles = [
     additionalLinkText: 'View Announcement'
   },
   {
-    id: 3,
+    id: 5,
     title: 'Awards Judge',
     organization: 'Business Intelligence Group',
     description: 'Volunteering to evaluate and recognize innovative business solutions and leadership in technology.',
@@ -46,7 +70,7 @@ const roles = [
     linkText: 'View Profile'
   },
   {
-    id: 4,
+    id: 6,
     title: 'Program Committee Member',
     organization: 'RS4SD Workshop',
     description: 'Volunteering to review and select research papers and presentations in the field of software development.',
@@ -56,7 +80,7 @@ const roles = [
     linkText: 'View Committee'
   },
   {
-    id: 5,
+    id: 7,
     title: 'Paper Reviewer',
     organization: 'ICACECS 2025',
     description: 'Certified reviewer for ICACECS 2025 research papers. Contributed to maintaining the quality and integrity of academic research in the field of advanced computing and emerging computing sciences through thorough and constructive peer reviews.',
@@ -66,7 +90,7 @@ const roles = [
     linkText: 'View Certificate'
   },
   {
-    id: 6,
+    id: 8,
     title: 'Publicity Chair',
     organization: 'CCNIS 2025',
     description: 'Serving as Publicity Chair for the 2025 International Conference on Computer Networks and Information Security (CCNIS 2025), responsible for promoting the conference and increasing its visibility in the academic and professional communities.',
@@ -78,7 +102,7 @@ const roles = [
     additionalLinkText: 'Conference Website'
   },
   {
-    id: 7,
+    id: 9,
     title: 'Tentative Reviewer',
     organization: 'ICIS 2025',
     description: 'Reviewing research papers for ICIS 2025, contributing to the advancement of information systems research by evaluating and providing feedback on cutting-edge studies in the field.',
