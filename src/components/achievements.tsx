@@ -10,18 +10,6 @@ const BASE_URL = typeof window !== 'undefined' ? window.location.origin : '';
 const roles = [
   {
     id: 1,
-    title: 'Conference Speaker',
-    organization: 'IEEE San Francisco Bay Area Computer Society',
-    description: 'Presenting on "Telemetry-Driven GitHub Copilot Integration Framework" at this prestigious technical society meeting.',
-    icon: <Presentation className="h-6 w-6 text-primary" />,
-    period: 'September 21, 2025',
-    location: 'San Francisco Bay Area, CA',
-    link: '#',
-    linkText: 'Event Details',
-    isUpcoming: true
-  },
-  {
-    id: 2,
     title: 'Poster Session Speaker',
     organization: 'Linux Foundation - PyTorch Conference 2025',
     description: 'Presenting research on "Reducing MTTR and Alert Fatigue with PyTorch-Powered Anomaly Detection" at this premier PyTorch conference.',
@@ -30,6 +18,18 @@ const roles = [
     location: 'San Francisco, CA',
     link: '#',
     linkText: 'Conference Details',
+    isUpcoming: true
+  },
+  {
+    id: 2,
+    title: 'Conference Speaker',
+    organization: 'IEEE San Francisco Bay Area Computer Society',
+    description: 'Presenting on "Telemetry-Driven GitHub Copilot Integration Framework" at this prestigious technical society meeting.',
+    icon: <Presentation className="h-6 w-6 text-primary" />,
+    period: 'September 21, 2025',
+    location: 'San Francisco Bay Area, CA',
+    link: '#',
+    linkText: 'Event Details',
     isUpcoming: true
   },
   {
