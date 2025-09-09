@@ -20,11 +20,34 @@ const robotoMono = Roboto_Mono({
 
 export const metadata: Metadata = {
   title: 'Kapil Poreddy | AI Powered Senior Engineering Leader',
-  description: 'Professional portfolio of Kapil Poreddy, showcasing expertise in AI, Machine Learning, and Digital Transformation',
+  description: 'Making customer shopping checkout experience healthy and delightful',
   keywords: ['AI Engineer', 'Machine Learning', 'Digital Transformation', 'Portfolio', 'Kapil Poreddy'],
   icons: {
     icon: '/favicon.png',
   },
+  openGraph: {
+    title: 'Kapil Poreddy | AI Powered Senior Engineering Leader',
+    description: 'Making customer shopping checkout experience healthy and delightful',
+    url: 'https://kapilporeddy.com',
+    siteName: 'Kapil Poreddy',
+    images: [
+      {
+        url: '/images/headshot.jpg',
+        width: 800,
+        height: 600,
+        alt: 'Kapil Poreddy',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kapil Poreddy | AI Powered Senior Engineering Leader',
+    description: 'Making customer shopping checkout experience healthy and delightful',
+    images: ['/images/headshot.jpg'],
+  },
+  metadataBase: new URL('https://kapilporeddy.com'),
 };
 
 export default function RootLayout({
@@ -43,8 +66,8 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <div className="relative flex min-h-screen flex-col">

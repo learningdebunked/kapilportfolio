@@ -5,7 +5,7 @@ import { AdvisoryRoles } from '@/components/achievements';
 
 export const metadata: Metadata = {
   title: 'Kapil Poreddy | AI Powered Senior Engineering Leader',
-  description: 'Professional portfolio of Kapil Poreddy, showcasing expertise in AI, Machine Learning, and Digital Transformation',
+  description: 'Making customer shopping checkout experience healthy and delightful',
 };
 
 export default function Home() {
