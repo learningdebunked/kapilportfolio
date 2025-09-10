@@ -9,6 +9,16 @@ const BASE_URL = typeof window !== 'undefined' ? window.location.origin : '';
 
 const roles = [
   {
+    id: 0,
+    title: 'Program Committee',
+    organization: 'International Conference on Advanced Mobile, IoT and Cloud Computing Technology (AMICT 2025)',
+    description: 'Serving on the program committee to review and evaluate research paper submissions for AMICT 2025, ensuring high-quality technical content and research standards.',
+    icon: <FileText className="h-6 w-6 text-primary" />,
+    period: 'September 2025',
+    link: 'https://amictconf.com/',
+    linkText: 'Conference Website'
+  },
+  {
     id: 1,
     title: 'Poster Session Speaker',
     organization: 'Linux Foundation - PyTorch Conference 2025',
