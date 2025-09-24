@@ -3,6 +3,7 @@
 import { Award, Users, Star, ChevronRight, FileText, Presentation, Share2 } from 'lucide-react';
 import { useState } from 'react';
 import { PdfViewer } from './PdfViewer';
+import { ImageViewer } from './ImageViewer';
 import { toast } from 'sonner';
 
 const BASE_URL = typeof window !== 'undefined' ? window.location.origin : '';
@@ -77,7 +78,12 @@ const roles = [
     icon: <Award className="h-6 w-6 text-primary" />,
     period: 'August 2025',
     link: 'https://www.bintelligence.com/judge/kapil-poreddy',
-    linkText: 'View Profile'
+    linkText: 'View Profile',
+    additionalLink: '/certificates/BI-Badge.png',
+    additionalLinkText: 'View Badge',
+    thirdLink: '/certificates/BI-Certificate.png',
+    thirdLinkText: 'View Certificate',
+    isPdf: true
   },
   {
     id: 6,
@@ -126,10 +132,17 @@ const roles = [
 export function AdvisoryRoles() {
   const [openPdf, setOpenPdf] = useState(false);
   const [currentPdf, setCurrentPdf] = useState('');
+  const [openImage, setOpenImage] = useState(false);
+  const [currentImage, setCurrentImage] = useState('');
 
   const handlePdfClick = (pdfUrl: string) => {
     setCurrentPdf(pdfUrl);
     setOpenPdf(true);
+  };
+
+  const handleImageClick = (imageUrl: string) => {
+    setCurrentImage(imageUrl);
+    setOpenImage(true);
   };
   return (
     <section className="py-12 bg-white dark:bg-gray-900">
@@ -227,21 +240,28 @@ export function AdvisoryRoles() {
                 )}
                 {role.additionalLink && (
                   <div className="flex flex-col">
-                    <a
-                      href={role.additionalLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-3 inline-flex items-center text-sm font-medium text-primary hover:underline"
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        if (role.additionalLink.endsWith('.png') || role.additionalLink.endsWith('.jpg') || role.additionalLink.endsWith('.jpeg')) {
+                          handleImageClick(role.additionalLink);
+                        } else {
+                          window.open(role.additionalLink, '_blank');
+                        }
+                      }}
+                      className="mt-3 inline-flex items-center text-sm font-medium text-primary hover:underline text-left"
                     >
                       {role.additionalLinkText} <ChevronRight className="ml-1 h-4 w-4" />
-                    </a>
+                    </button>
                     {role.thirdLink && (
                       <button
                         onClick={(e) => {
                           e.preventDefault();
-                          role.isPdf 
-                            ? handlePdfClick(role.thirdLink) 
-                            : window.open(role.thirdLink, '_blank');
+                          if (role.thirdLink.endsWith('.pdf')) {
+                          handlePdfClick(role.thirdLink);
+                        } else {
+                          handleImageClick(role.thirdLink);
+                        }
                         }}
                         className="mt-2 inline-flex items-center text-sm font-medium text-primary hover:underline text-left"
                       >
@@ -259,6 +279,12 @@ export function AdvisoryRoles() {
         url={currentPdf} 
         open={openPdf} 
         onOpenChange={setOpenPdf} 
+      />
+      <ImageViewer
+        url={currentImage}
+        open={openImage}
+        onOpenChange={setOpenImage}
+        alt="Badge Viewer"
       />
     </section>
   );
