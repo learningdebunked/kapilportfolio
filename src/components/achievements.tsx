@@ -81,7 +81,7 @@ const roles = [
     linkText: 'View Profile',
     additionalLink: '/certificates/BI-Badge.png',
     additionalLinkText: 'View Badge',
-    thirdLink: '/certificates/BI-Certificate.png',
+    thirdLink: '/certificates/Bi-Certificate.png',
     thirdLinkText: 'View Certificate',
     isPdf: true
   },
