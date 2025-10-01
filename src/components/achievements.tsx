@@ -11,6 +11,50 @@ const BASE_URL = typeof window !== 'undefined' ? window.location.origin : '';
 const roles = [
   {
     id: 0,
+    title: 'Conference Speaker',
+    organization: 'Datacon LA 2025',
+    description: 'Panelist at Datacon LA, discussing data engineering best practices and emerging trends in big data technologies.',
+    icon: <Presentation className="h-6 w-6 text-primary" />,
+    period: 'November 8, 2025',
+    link: 'https://www.dataconla.com/events/dcla-2025/',
+    linkText: 'Event Details',
+    isUpcoming: true
+  },
+  {
+    id: 1,
+    title: 'Keynote Speaker',
+    organization: 'Open Source Data Summit 2025',
+    description: 'Keynote speaker at the Open Source Data Summit, exploring the future of open data and collaborative analytics.',
+    icon: <Presentation className="h-6 w-6 text-primary" />,
+    period: 'November 6, 2025',
+    link: 'https://opensourcedatasummit.com/',
+    linkText: 'Event Website',
+    isUpcoming: true
+  },
+  {
+    id: 2,
+    title: 'Conference Speaker',
+    organization: 'XtremeJ 2025',
+    description: 'Presenting at XtremeJ, discussing cutting-edge Java technologies and modern software development practices.',
+    icon: <Presentation className="h-6 w-6 text-primary" />,
+    period: 'November 3, 2025',
+    link: 'https://xtremej.dev/2025/speakers/',
+    linkText: 'View Speakers',
+    isUpcoming: true
+  },
+  {
+    id: 3,
+    title: 'Conference Speaker',
+    organization: 'Conference for Engineering Diversity',
+    description: 'Speaking at the Conference for Engineering Diversity, sharing insights on fostering inclusivity and innovation in the tech industry.',
+    icon: <Presentation className="h-6 w-6 text-primary" />,
+    period: 'October 4, 2025',
+    link: 'https://www.sjsuced.org/',
+    linkText: 'View Event',
+    isUpcoming: true
+  },
+  {
+    id: 4,
     title: 'Program Committee',
     organization: 'International Conference on Advanced Mobile, IoT and Cloud Computing Technology (AMICT 2025)',
     description: 'Serving on the program committee to review and evaluate research paper submissions for AMICT 2025, ensuring high-quality technical content and research standards.',

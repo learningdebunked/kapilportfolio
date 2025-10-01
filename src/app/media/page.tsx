@@ -11,6 +11,67 @@ export default function MediaPage() {
   const mediaItems = [
     {
       id: 1,
+      title: 'Conference for Engineering Diversity',
+      description: 'Speaking at the Conference for Engineering Diversity, sharing insights on fostering inclusivity and innovation in the tech industry.',
+      icon: <Mic className="h-5 w-5 text-primary" />,
+      image: '/images/GDAI.png',
+      tags: ['Conference', 'Diversity', 'Inclusion', 'Engineering', 'Oct 4, 2025'],
+      links: [
+        {
+          label: 'View Event',
+          url: 'https://www.sjsuced.org/',
+          external: true,
+          icon: <ExternalLink className="ml-1 h-4 w-4" />
+        }
+      ]
+    },
+    {
+      id: 2,
+      title: 'XtremeJ 2025',
+      description: 'Presenting at XtremeJ, discussing cutting-edge Java technologies and modern software development practices.',
+      icon: <Mic className="h-5 w-5 text-primary" />,
+      image: '/images/SpeakerCard.jpeg',
+      tags: ['Java', 'Development', 'Technology', 'Conference', 'Nov 3, 2025'],
+      links: [
+        {
+          label: 'View Speakers',
+          url: 'https://xtremej.dev/2025/speakers/',
+          external: true
+        }
+      ]
+    },
+    {
+      id: 3,
+      title: 'Open Source Data Summit 2025',
+      description: 'Keynote speaker at the Open Source Data Summit, exploring the future of open data and collaborative analytics.',
+      icon: <Mic className="h-5 w-5 text-primary" />,
+      image: '/images/DigitalTransformationExpo.png',
+      tags: ['Open Source', 'Data', 'Analytics', 'Keynote', 'Nov 6, 2025'],
+      links: [
+        {
+          label: 'Event Website',
+          url: 'https://opensourcedatasummit.com/',
+          external: true
+        }
+      ]
+    },
+    {
+      id: 4,
+      title: 'Datacon LA 2025',
+      description: 'Panelist at Datacon LA, discussing data engineering best practices and emerging trends in big data technologies.',
+      icon: <Mic className="h-5 w-5 text-primary" />,
+      image: '/images/GDAI.png',
+      tags: ['Data Engineering', 'Big Data', 'Conference', 'Panel', 'Nov 8, 2025'],
+      links: [
+        {
+          label: 'Event Details',
+          url: 'https://www.dataconla.com/events/dcla-2025/',
+          external: true
+        }
+      ]
+    },
+    {
+      id: 5,
       title: 'Moderator - GDAI 2025',
       description: 'Serving as a moderator at the Global Data & AI Conference 2025, facilitating discussions and knowledge sharing among industry leaders and researchers in the field of Data Science and Artificial Intelligence.',
       icon: <Mic className="h-5 w-5 text-primary" />,
@@ -26,7 +87,7 @@ export default function MediaPage() {
       ]
     },
     {
-      id: 2,
+      id: 6,
       title: 'Machine Learning Summit 2025',
       description: 'Panel: "Building AI Agents: Techniques and Tradeoffs That Matter" - A deep dive into the practical aspects of developing AI agents with real-world applications.',
       icon: <Mic className="h-5 w-5 text-primary" />,
@@ -41,7 +102,7 @@ export default function MediaPage() {
       ]
     },
     {
-      id: 3,
+      id: 7,
       title: 'Digital Transformation Week',
       description: 'Panel: Unifying teams for successful digital transformation: Strategies for engagement and collaboration',
       icon: <Calendar className="h-5 w-5 text-primary" />,
